@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		53BC5ADA1E37ABEB0074B064 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BC5AD61E37ABEB0074B064 /* Team.swift */; };
+		53BC5ADB1E37ABEB0074B064 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BC5AD71E37ABEB0074B064 /* Game.swift */; };
+		53BC5ADC1E37ABEB0074B064 /* Week.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BC5AD81E37ABEB0074B064 /* Week.swift */; };
+		53BC5ADD1E37ABEB0074B064 /* Season.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BC5AD91E37ABEB0074B064 /* Season.swift */; };
+		53BC5ADE1E37AC580074B064 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BC5AD61E37ABEB0074B064 /* Team.swift */; };
+		53BC5ADF1E37AC580074B064 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BC5AD71E37ABEB0074B064 /* Game.swift */; };
+		53BC5AE01E37AC580074B064 /* Week.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BC5AD81E37ABEB0074B064 /* Week.swift */; };
+		53BC5AE11E37AC580074B064 /* Season.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BC5AD91E37ABEB0074B064 /* Season.swift */; };
 		OBJ_134 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* Logger.swift */; };
 		OBJ_141 /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* Socket.swift */; };
 		OBJ_142 /* SocketProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* SocketProtocols.swift */; };
@@ -301,6 +309,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		53BC5AD61E37ABEB0074B064 /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Team.swift; path = "Client/Kitura-microservices-demo-client/Kitura-microservices-demo-client/Team.swift"; sourceTree = SOURCE_ROOT; };
+		53BC5AD71E37ABEB0074B064 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Game.swift; path = "Client/Kitura-microservices-demo-client/Kitura-microservices-demo-client/Game.swift"; sourceTree = SOURCE_ROOT; };
+		53BC5AD81E37ABEB0074B064 /* Week.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Week.swift; path = "Client/Kitura-microservices-demo-client/Kitura-microservices-demo-client/Week.swift"; sourceTree = SOURCE_ROOT; };
+		53BC5AD91E37ABEB0074B064 /* Season.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Season.swift; path = "Client/Kitura-microservices-demo-client/Kitura-microservices-demo-client/Season.swift"; sourceTree = SOURCE_ROOT; };
 		OBJ_100 /* RawBodyParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawBodyParser.swift; sourceTree = "<group>"; };
 		OBJ_101 /* TextBodyParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBodyParser.swift; sourceTree = "<group>"; };
 		OBJ_102 /* URLEncodedBodyParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLEncodedBodyParser.swift; sourceTree = "<group>"; };
@@ -504,6 +516,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		53BC5ACF1E37ABC90074B064 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				53BC5AD61E37ABEB0074B064 /* Team.swift */,
+				53BC5AD71E37ABEB0074B064 /* Game.swift */,
+				53BC5AD81E37ABEB0074B064 /* Week.swift */,
+				53BC5AD91E37ABEB0074B064 /* Season.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		OBJ_10 /* Socket */ = {
 			isa = PBXGroup;
 			children = (
@@ -549,6 +572,7 @@
 		OBJ_115 /* Kitura-microservice-demo */ = {
 			isa = PBXGroup;
 			children = (
+				53BC5ACF1E37ABC90074B064 /* Models */,
 				OBJ_116 /* main.swift */,
 			);
 			name = "Kitura-microservice-demo";
@@ -1030,6 +1054,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				53BC5ADA1E37ABEB0074B064 /* Team.swift in Sources */,
+				53BC5ADC1E37ABEB0074B064 /* Week.swift in Sources */,
+				53BC5ADD1E37ABEB0074B064 /* Season.swift in Sources */,
+				53BC5ADB1E37ABEB0074B064 /* Game.swift in Sources */,
 				OBJ_134 /* Logger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1180,6 +1208,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				53BC5ADE1E37AC580074B064 /* Team.swift in Sources */,
+				53BC5ADF1E37AC580074B064 /* Game.swift in Sources */,
+				53BC5AE01E37AC580074B064 /* Week.swift in Sources */,
+				53BC5AE11E37AC580074B064 /* Season.swift in Sources */,
 				OBJ_308 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

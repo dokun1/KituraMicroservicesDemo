@@ -3,42 +3,6 @@ import Foundation
 import HeliumLogger
 import SwiftyJSON
 
-struct Season {
-    let year: Int
-    var weeks: [Int: Week]?
-}
-
-struct Week {
-    let weekNumber: Int
-    let games: [Game]
-    
-    var json: [String: AnyObject] {
-        var gameArray = [[String : AnyObject]]()
-        for game in games {
-            gameArray.append(game.json)
-        }
-        return ["weekNumber" : weekNumber as AnyObject,
-                "gameDetails" : gameArray as AnyObject]
-    }
-}
-
-struct Game {
-    let awayTeam: Team
-    let homeTeam: Team
-    
-    var json: [String: AnyObject] {
-        return ["awayTeam" : awayTeam.name as AnyObject,
-                "awayScore" : awayTeam.score as AnyObject,
-                "homeTeam" : homeTeam.name as AnyObject,
-                "homeScore" : homeTeam.score as AnyObject]
-    }
-}
-
-struct Team {
-    let name: String
-    let score: Int
-}
-
 let router = Router()
 var lastRequestTime: Date?
 var cachedSeason: Season?
@@ -101,7 +65,7 @@ router.get("/currentYear/:week") { request, response, _ in
             
             let thisWeek = Week(weekNumber: Int(week)!, games: savedGames)
             if cachedSeason == nil {
-                cachedSeason = Season(year: 2016, weeks: [:])
+                cachedSeason = Season(yearNumber: 2016, weeks: [:])
             }
             cachedSeason?.weeks?[Int(week)!] = thisWeek
             lastRequestTime = Date()
@@ -118,3 +82,4 @@ router.get("/currentYear/:week") { request, response, _ in
 Kitura.addHTTPServer(onPort: 8090, with: router)
 
 Kitura.run()
+
