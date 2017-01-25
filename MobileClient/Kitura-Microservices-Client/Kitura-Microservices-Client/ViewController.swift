@@ -26,8 +26,5 @@ class ViewController: UICollectionViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
-
-
 }
 

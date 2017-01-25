@@ -8,6 +8,15 @@
 
 import UIKit
 
+public struct DefaultQueryOptions {
+    static let hostURLDefaultKey = "com.ibm.cloud.kituraDemo.hostURLKey"
+    static let animalChoiceDefaultKey = "com.ibm.cloud.kituraDemo.animalChoiceKey"
+    static let friendlyChoiceDefaultKey = "com.ibm.cloud.kituraDemo.friendlyChoiceKey"
+    static let pluralChoiceDefaultKey = "com.ibm.cloud.kituraDemo.pluralChoiceKey"
+    
+    static let animalsBearsOnlyDefault = "com.ibm.cloud.kituraDemo.pluralChoiceKey"
+}
+
 class SettingsController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
