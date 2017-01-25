@@ -28,7 +28,7 @@ class Animal: Equatable {
                 "photoURL" : photoURL as AnyObject,
                 "looksFriendly" : looksFriendly as AnyObject,
                 "plural" : plural as AnyObject,
-                "type" : typeString as AnyObject]
+                "animalType" : typeString as AnyObject]
     }
     
     init (animalID: Int, photoURL: String, looksFriendly: Bool, plural: Bool, type: AnimalType) {
