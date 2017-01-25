@@ -1,0 +1,31 @@
+{
+  "name": "Cat",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "photoURL": {
+      "type": "string",
+      "required": true
+    },
+    "looksFriendly": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "plural": {
+      "type": "boolean",
+      "required": true
+    },
+    "animalType": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
