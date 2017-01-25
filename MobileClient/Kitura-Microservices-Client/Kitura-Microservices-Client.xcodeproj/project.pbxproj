@@ -1,0 +1,471 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		53BC5AEF1E3840BC0074B064 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BC5AEE1E3840BC0074B064 /* AppDelegate.swift */; };
+		53BC5AF11E3840BC0074B064 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BC5AF01E3840BC0074B064 /* ViewController.swift */; };
+		53BC5AF41E3840BC0074B064 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53BC5AF21E3840BC0074B064 /* Main.storyboard */; };
+		53BC5AF61E3840BC0074B064 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53BC5AF51E3840BC0074B064 /* Assets.xcassets */; };
+		53BC5AF91E3840BC0074B064 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53BC5AF71E3840BC0074B064 /* LaunchScreen.storyboard */; };
+		53BC5B041E3840BC0074B064 /* Kitura_Microservices_ClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BC5B031E3840BC0074B064 /* Kitura_Microservices_ClientTests.swift */; };
+		53BC5B0F1E38481C0074B064 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BC5B0E1E38481C0074B064 /* SettingsController.swift */; };
+		53BC5B151E384C3A0074B064 /* AnimalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BC5B141E384C3A0074B064 /* AnimalCell.swift */; };
+		53BC5B171E384E060074B064 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BC5B161E384E060074B064 /* Animal.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		53BC5B001E3840BC0074B064 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 53BC5AE31E3840BC0074B064 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 53BC5AEA1E3840BC0074B064;
+			remoteInfo = "Kitura-Microservices-Client";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		53BC5AEB1E3840BC0074B064 /* Kitura-Microservices-Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kitura-Microservices-Client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		53BC5AEE1E3840BC0074B064 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		53BC5AF01E3840BC0074B064 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		53BC5AF31E3840BC0074B064 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		53BC5AF51E3840BC0074B064 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		53BC5AF81E3840BC0074B064 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		53BC5AFA1E3840BC0074B064 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53BC5AFF1E3840BC0074B064 /* Kitura-Microservices-ClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kitura-Microservices-ClientTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		53BC5B031E3840BC0074B064 /* Kitura_Microservices_ClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kitura_Microservices_ClientTests.swift; sourceTree = "<group>"; };
+		53BC5B051E3840BC0074B064 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53BC5B0E1E38481C0074B064 /* SettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
+		53BC5B141E384C3A0074B064 /* AnimalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalCell.swift; sourceTree = "<group>"; };
+		53BC5B161E384E060074B064 /* Animal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		53BC5AE81E3840BC0074B064 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53BC5AFC1E3840BC0074B064 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		53BC5AE21E3840BC0074B064 = {
+			isa = PBXGroup;
+			children = (
+				53BC5AED1E3840BC0074B064 /* Kitura-Microservices-Client */,
+				53BC5B021E3840BC0074B064 /* Kitura-Microservices-ClientTests */,
+				53BC5AEC1E3840BC0074B064 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		53BC5AEC1E3840BC0074B064 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				53BC5AEB1E3840BC0074B064 /* Kitura-Microservices-Client.app */,
+				53BC5AFF1E3840BC0074B064 /* Kitura-Microservices-ClientTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		53BC5AED1E3840BC0074B064 /* Kitura-Microservices-Client */ = {
+			isa = PBXGroup;
+			children = (
+				53BC5B131E384C170074B064 /* Util */,
+				53BC5B111E3848A10074B064 /* Models */,
+				53BC5B101E3848970074B064 /* Controllers */,
+				53BC5B121E384C130074B064 /* View */,
+			);
+			path = "Kitura-Microservices-Client";
+			sourceTree = "<group>";
+		};
+		53BC5B021E3840BC0074B064 /* Kitura-Microservices-ClientTests */ = {
+			isa = PBXGroup;
+			children = (
+				53BC5B031E3840BC0074B064 /* Kitura_Microservices_ClientTests.swift */,
+				53BC5B051E3840BC0074B064 /* Info.plist */,
+			);
+			path = "Kitura-Microservices-ClientTests";
+			sourceTree = "<group>";
+		};
+		53BC5B101E3848970074B064 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				53BC5AEE1E3840BC0074B064 /* AppDelegate.swift */,
+				53BC5AF01E3840BC0074B064 /* ViewController.swift */,
+				53BC5B0E1E38481C0074B064 /* SettingsController.swift */,
+				53BC5B141E384C3A0074B064 /* AnimalCell.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		53BC5B111E3848A10074B064 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				53BC5B161E384E060074B064 /* Animal.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		53BC5B121E384C130074B064 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				53BC5AF21E3840BC0074B064 /* Main.storyboard */,
+				53BC5AF51E3840BC0074B064 /* Assets.xcassets */,
+				53BC5AF71E3840BC0074B064 /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		53BC5B131E384C170074B064 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				53BC5AFA1E3840BC0074B064 /* Info.plist */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		53BC5AEA1E3840BC0074B064 /* Kitura-Microservices-Client */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53BC5B081E3840BC0074B064 /* Build configuration list for PBXNativeTarget "Kitura-Microservices-Client" */;
+			buildPhases = (
+				53BC5AE71E3840BC0074B064 /* Sources */,
+				53BC5AE81E3840BC0074B064 /* Frameworks */,
+				53BC5AE91E3840BC0074B064 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Kitura-Microservices-Client";
+			productName = "Kitura-Microservices-Client";
+			productReference = 53BC5AEB1E3840BC0074B064 /* Kitura-Microservices-Client.app */;
+			productType = "com.apple.product-type.application";
+		};
+		53BC5AFE1E3840BC0074B064 /* Kitura-Microservices-ClientTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53BC5B0B1E3840BC0074B064 /* Build configuration list for PBXNativeTarget "Kitura-Microservices-ClientTests" */;
+			buildPhases = (
+				53BC5AFB1E3840BC0074B064 /* Sources */,
+				53BC5AFC1E3840BC0074B064 /* Frameworks */,
+				53BC5AFD1E3840BC0074B064 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				53BC5B011E3840BC0074B064 /* PBXTargetDependency */,
+			);
+			name = "Kitura-Microservices-ClientTests";
+			productName = "Kitura-Microservices-ClientTests";
+			productReference = 53BC5AFF1E3840BC0074B064 /* Kitura-Microservices-ClientTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		53BC5AE31E3840BC0074B064 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "David Okun IBM";
+				TargetAttributes = {
+					53BC5AEA1E3840BC0074B064 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = L2QS4H9G32;
+						ProvisioningStyle = Automatic;
+					};
+					53BC5AFE1E3840BC0074B064 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = L2QS4H9G32;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 53BC5AEA1E3840BC0074B064;
+					};
+				};
+			};
+			buildConfigurationList = 53BC5AE61E3840BC0074B064 /* Build configuration list for PBXProject "Kitura-Microservices-Client" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 53BC5AE21E3840BC0074B064;
+			productRefGroup = 53BC5AEC1E3840BC0074B064 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				53BC5AEA1E3840BC0074B064 /* Kitura-Microservices-Client */,
+				53BC5AFE1E3840BC0074B064 /* Kitura-Microservices-ClientTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		53BC5AE91E3840BC0074B064 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53BC5AF91E3840BC0074B064 /* LaunchScreen.storyboard in Resources */,
+				53BC5AF61E3840BC0074B064 /* Assets.xcassets in Resources */,
+				53BC5AF41E3840BC0074B064 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53BC5AFD1E3840BC0074B064 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		53BC5AE71E3840BC0074B064 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53BC5B0F1E38481C0074B064 /* SettingsController.swift in Sources */,
+				53BC5B151E384C3A0074B064 /* AnimalCell.swift in Sources */,
+				53BC5AF11E3840BC0074B064 /* ViewController.swift in Sources */,
+				53BC5AEF1E3840BC0074B064 /* AppDelegate.swift in Sources */,
+				53BC5B171E384E060074B064 /* Animal.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53BC5AFB1E3840BC0074B064 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53BC5B041E3840BC0074B064 /* Kitura_Microservices_ClientTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		53BC5B011E3840BC0074B064 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 53BC5AEA1E3840BC0074B064 /* Kitura-Microservices-Client */;
+			targetProxy = 53BC5B001E3840BC0074B064 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		53BC5AF21E3840BC0074B064 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				53BC5AF31E3840BC0074B064 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		53BC5AF71E3840BC0074B064 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				53BC5AF81E3840BC0074B064 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		53BC5B061E3840BC0074B064 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		53BC5B071E3840BC0074B064 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		53BC5B091E3840BC0074B064 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = L2QS4H9G32;
+				INFOPLIST_FILE = "Kitura-Microservices-Client/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ibm.cloud.Kitura-Microservices-Client";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		53BC5B0A1E3840BC0074B064 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = L2QS4H9G32;
+				INFOPLIST_FILE = "Kitura-Microservices-Client/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ibm.cloud.Kitura-Microservices-Client";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		53BC5B0C1E3840BC0074B064 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = L2QS4H9G32;
+				INFOPLIST_FILE = "Kitura-Microservices-ClientTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ibm.cloud.Kitura-Microservices-ClientTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kitura-Microservices-Client.app/Kitura-Microservices-Client";
+			};
+			name = Debug;
+		};
+		53BC5B0D1E3840BC0074B064 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = L2QS4H9G32;
+				INFOPLIST_FILE = "Kitura-Microservices-ClientTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ibm.cloud.Kitura-Microservices-ClientTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kitura-Microservices-Client.app/Kitura-Microservices-Client";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		53BC5AE61E3840BC0074B064 /* Build configuration list for PBXProject "Kitura-Microservices-Client" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53BC5B061E3840BC0074B064 /* Debug */,
+				53BC5B071E3840BC0074B064 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		53BC5B081E3840BC0074B064 /* Build configuration list for PBXNativeTarget "Kitura-Microservices-Client" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53BC5B091E3840BC0074B064 /* Debug */,
+				53BC5B0A1E3840BC0074B064 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		53BC5B0B1E3840BC0074B064 /* Build configuration list for PBXNativeTarget "Kitura-Microservices-ClientTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53BC5B0C1E3840BC0074B064 /* Debug */,
+				53BC5B0D1E3840BC0074B064 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 53BC5AE31E3840BC0074B064 /* Project object */;
+}

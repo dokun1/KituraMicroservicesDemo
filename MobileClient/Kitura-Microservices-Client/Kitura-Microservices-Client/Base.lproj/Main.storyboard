@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="xba-ic-HLF">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Animals!-->
+        <scene sceneID="M0f-oB-J0s">
+            <objects>
+                <collectionViewController id="pIM-4U-bnd" customClass="ViewController" customModule="Kitura_Microservices_Client" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="cFw-nC-mWt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Fe4-bd-BsP">
+                            <size key="itemSize" width="333" height="271"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="animalCell" id="Nlb-7p-nhk" customClass="AnimalCell" customModule="Kitura_Microservices_Client" customModuleProvider="target">
+                                <rect key="frame" x="21" y="0.0" width="333" height="271"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="333" height="271"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="25a-Ka-0rI">
+                                            <rect key="frame" x="0.0" y="0.0" width="333" height="236"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Looks Friendly: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GBf-Bm-eg2">
+                                            <rect key="frame" x="8" y="242" width="117" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="117" id="Hbh-0L-Cer"/>
+                                                <constraint firstAttribute="height" constant="21" id="yiu-FV-xh8"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="slghsdiugiudsgilgsigefsi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vJi-J8-leS">
+                                            <rect key="frame" x="130" y="242" width="195" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="Vye-r0-4gT"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="25a-Ka-0rI" secondAttribute="trailing" id="8vn-Qd-qsf"/>
+                                    <constraint firstItem="vJi-J8-leS" firstAttribute="bottom" secondItem="Nlb-7p-nhk" secondAttribute="bottomMargin" id="AQr-HJ-SzQ"/>
+                                    <constraint firstItem="GBf-Bm-eg2" firstAttribute="bottom" secondItem="Nlb-7p-nhk" secondAttribute="bottomMargin" id="Hb6-DV-1nR"/>
+                                    <constraint firstItem="25a-Ka-0rI" firstAttribute="leading" secondItem="Nlb-7p-nhk" secondAttribute="leading" id="X5L-n3-syf"/>
+                                    <constraint firstItem="vJi-J8-leS" firstAttribute="top" secondItem="25a-Ka-0rI" secondAttribute="bottom" constant="6" id="d7L-zK-JA9"/>
+                                    <constraint firstItem="vJi-J8-leS" firstAttribute="trailing" secondItem="Nlb-7p-nhk" secondAttribute="trailingMargin" id="ego-Vy-42N"/>
+                                    <constraint firstItem="vJi-J8-leS" firstAttribute="leading" secondItem="GBf-Bm-eg2" secondAttribute="trailing" constant="5" id="gN5-q3-xSE"/>
+                                    <constraint firstItem="GBf-Bm-eg2" firstAttribute="leading" secondItem="Nlb-7p-nhk" secondAttribute="leadingMargin" id="gZM-bd-O9H"/>
+                                    <constraint firstItem="25a-Ka-0rI" firstAttribute="top" secondItem="Nlb-7p-nhk" secondAttribute="top" id="rOi-ro-QSG"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="friendlyLabel" destination="vJi-J8-leS" id="cYA-H0-4vz"/>
+                                    <outlet property="imageView" destination="25a-Ka-0rI" id="7pj-6m-7om"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="pIM-4U-bnd" id="Shl-KN-hTd"/>
+                            <outlet property="delegate" destination="pIM-4U-bnd" id="QrR-QR-McZ"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Animals!" id="nna-U2-HfT">
+                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="z59-P1-65N"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="Ojz-LF-NoQ"/>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="wkU-ez-46U" kind="show" identifier="SettingsSegue" id="EPd-OT-Wfb"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kUa-gd-TdJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1868" y="36.431784107946029"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="9Zi-SL-bxM">
+            <objects>
+                <viewController id="wkU-ez-46U" customClass="SettingsController" customModule="Kitura_Microservices_Client" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="T9U-fO-I0W"/>
+                        <viewControllerLayoutGuide type="bottom" id="CVh-sB-m8D"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OzN-2g-i74">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Host URL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nFK-Ox-a8Y">
+                                <rect key="frame" x="16" y="72" width="343" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="hvi-fQ-O0L"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wBS-fr-5ZU">
+                                <rect key="frame" x="16" y="108" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Kfz-BD-U4t"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="URL"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animal Choice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i3O-nw-4kJ">
+                                <rect key="frame" x="16" y="146" width="343" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="6vE-SH-ZUg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="2" translatesAutoresizingMaskIntoConstraints="NO" id="gsD-Jl-D0f">
+                                <rect key="frame" x="16" y="182" width="343" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="Wmr-tC-C4d"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Cats"/>
+                                    <segment title="Bears"/>
+                                    <segment title="Both"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Looking Friendly?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yU2-nG-tUG">
+                                <rect key="frame" x="16" y="218" width="343" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="J26-fu-MaY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="2" translatesAutoresizingMaskIntoConstraints="NO" id="7Fq-vU-hf5">
+                                <rect key="frame" x="16" y="254" width="343" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="IIR-W1-xiO"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Friendly Only"/>
+                                    <segment title="Unfriendly Only"/>
+                                    <segment title="Both"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Need more than one Animal?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9DM-Gr-ncg">
+                                <rect key="frame" x="16" y="290" width="343" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="uN6-qR-jjP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="2" translatesAutoresizingMaskIntoConstraints="NO" id="UQX-ut-CIC">
+                                <rect key="frame" x="16" y="326" width="343" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="EhV-aV-M3e"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Single Animals"/>
+                                    <segment title="Many Animals"/>
+                                    <segment title="Both"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wBS-fr-5ZU" firstAttribute="top" secondItem="nFK-Ox-a8Y" secondAttribute="bottom" constant="8" id="0cX-Ck-OjG"/>
+                            <constraint firstItem="yU2-nG-tUG" firstAttribute="leading" secondItem="OzN-2g-i74" secondAttribute="leadingMargin" id="2id-x8-ULz"/>
+                            <constraint firstItem="i3O-nw-4kJ" firstAttribute="top" secondItem="wBS-fr-5ZU" secondAttribute="bottom" constant="8" id="4F7-ML-nxd"/>
+                            <constraint firstItem="7Fq-vU-hf5" firstAttribute="trailing" secondItem="OzN-2g-i74" secondAttribute="trailingMargin" id="5Me-Be-qLz"/>
+                            <constraint firstItem="7Fq-vU-hf5" firstAttribute="top" secondItem="yU2-nG-tUG" secondAttribute="bottom" constant="8" id="Bh6-Mi-fac"/>
+                            <constraint firstItem="i3O-nw-4kJ" firstAttribute="trailing" secondItem="OzN-2g-i74" secondAttribute="trailingMargin" id="GI9-Or-nqh"/>
+                            <constraint firstItem="UQX-ut-CIC" firstAttribute="top" secondItem="9DM-Gr-ncg" secondAttribute="bottom" constant="8" id="Jrz-UB-wog"/>
+                            <constraint firstItem="gsD-Jl-D0f" firstAttribute="leading" secondItem="OzN-2g-i74" secondAttribute="leadingMargin" id="NvF-lv-ch7"/>
+                            <constraint firstItem="gsD-Jl-D0f" firstAttribute="trailing" secondItem="OzN-2g-i74" secondAttribute="trailingMargin" id="QFt-gW-SiC"/>
+                            <constraint firstItem="9DM-Gr-ncg" firstAttribute="leading" secondItem="OzN-2g-i74" secondAttribute="leadingMargin" id="QvB-JE-n9Z"/>
+                            <constraint firstItem="nFK-Ox-a8Y" firstAttribute="trailing" secondItem="OzN-2g-i74" secondAttribute="trailingMargin" id="Vi1-3H-sEb"/>
+                            <constraint firstItem="7Fq-vU-hf5" firstAttribute="leading" secondItem="OzN-2g-i74" secondAttribute="leadingMargin" id="Ywv-4d-3X6"/>
+                            <constraint firstItem="nFK-Ox-a8Y" firstAttribute="top" secondItem="T9U-fO-I0W" secondAttribute="bottom" constant="8" id="ZNy-yK-Nve"/>
+                            <constraint firstItem="9DM-Gr-ncg" firstAttribute="top" secondItem="7Fq-vU-hf5" secondAttribute="bottom" constant="8" id="e7j-J0-kwg"/>
+                            <constraint firstItem="nFK-Ox-a8Y" firstAttribute="leading" secondItem="OzN-2g-i74" secondAttribute="leadingMargin" id="h1e-Yv-TVN"/>
+                            <constraint firstItem="UQX-ut-CIC" firstAttribute="trailing" secondItem="OzN-2g-i74" secondAttribute="trailingMargin" id="hPd-r0-96n"/>
+                            <constraint firstItem="gsD-Jl-D0f" firstAttribute="top" secondItem="i3O-nw-4kJ" secondAttribute="bottom" constant="8" id="hvS-1y-tSy"/>
+                            <constraint firstItem="yU2-nG-tUG" firstAttribute="trailing" secondItem="OzN-2g-i74" secondAttribute="trailingMargin" id="jAY-Xo-vhp"/>
+                            <constraint firstItem="i3O-nw-4kJ" firstAttribute="leading" secondItem="OzN-2g-i74" secondAttribute="leadingMargin" id="pL9-gY-7gw"/>
+                            <constraint firstItem="wBS-fr-5ZU" firstAttribute="leading" secondItem="OzN-2g-i74" secondAttribute="leadingMargin" id="pSU-yO-Efc"/>
+                            <constraint firstItem="yU2-nG-tUG" firstAttribute="top" secondItem="gsD-Jl-D0f" secondAttribute="bottom" constant="8" id="qEW-LC-c2y"/>
+                            <constraint firstItem="wBS-fr-5ZU" firstAttribute="trailing" secondItem="OzN-2g-i74" secondAttribute="trailingMargin" id="rfh-Bf-vVL"/>
+                            <constraint firstItem="9DM-Gr-ncg" firstAttribute="trailing" secondItem="OzN-2g-i74" secondAttribute="trailingMargin" id="tFT-yR-O23"/>
+                            <constraint firstItem="UQX-ut-CIC" firstAttribute="leading" secondItem="OzN-2g-i74" secondAttribute="leadingMargin" id="vt9-av-l2D"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Settings" id="AAj-qu-YPY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SKB-F8-b8X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2687.1999999999998" y="37.331334332833585"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="guM-V9-A87">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xba-ic-HLF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1DP-ci-gFt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pIM-4U-bnd" kind="relationship" relationship="rootViewController" id="A1P-c1-OyW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oMd-x1-3Dw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="974" y="37"/>
+        </scene>
+    </scenes>
+</document>
