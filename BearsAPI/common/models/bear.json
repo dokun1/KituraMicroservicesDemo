@@ -18,6 +18,10 @@
     "plural": {
       "type": "boolean",
       "required": true
+    },
+    "animalType": {
+      "type": "string",
+      "required": true
     }
   },
   "validations": [],
