@@ -37,8 +37,7 @@ class Animal: Equatable {
         }
         
         let loadRequest = URLRequest(url: url)
-        
-        URLSession.shared.dataTask(with: loadRequest, completionHandler: { (data, response, error) in
+        let task = URLSession.shared.dataTask(with: loadRequest, completionHandler: { (data, response, error) in
             if let error = error {
                 DispatchQueue.main.async {
                     completion(self, error as NSError?)
@@ -58,7 +57,8 @@ class Animal: Equatable {
             DispatchQueue.main.async {
                 completion(self, nil)
             }
-        }).resume()
+        })
+        task.resume()
     }
 
 }

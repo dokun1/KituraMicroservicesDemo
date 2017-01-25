@@ -11,4 +11,6 @@ import UIKit
 class AnimalCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var friendlyLabel: UILabel!
+    @IBOutlet weak var animalIDLabel: UILabel!
+    @IBOutlet weak var pluralLabel: UILabel!
 }
