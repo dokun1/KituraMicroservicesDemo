@@ -1,12 +1,13 @@
 import Kitura
+import Foundation
+import SwiftyJSON
 
 // Create a new router
 let router = Router()
 
 // Handle HTTP GET requests to /
-router.get("/") {
-    request, response, next in
-    response.send("Hello, World!")
+router.get("/") { request, response, next in
+    response.send(json:["message" : "Hello, World!"])
     next()
 }
 

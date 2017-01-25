@@ -13,12 +13,23 @@ class Animal: Equatable {
         case Cat
         case Bear
     }
+    
     var loadedImage: UIImage?
+    
     let animalID: Int
     let photoURL: String
     let looksFriendly: Bool
     let plural: Bool
     let type: AnimalType
+    
+    var json: [String: AnyObject] {
+        let typeString = (type == AnimalType.Cat) ? "Cat" : "Bear"
+        return ["id" : animalID as AnyObject,
+                "photoURL" : photoURL as AnyObject,
+                "looksFriendly" : looksFriendly as AnyObject,
+                "plural" : plural as AnyObject,
+                "type" : typeString as AnyObject]
+    }
     
     init (animalID: Int, photoURL: String, looksFriendly: Bool, plural: Bool, type: AnimalType) {
         self.animalID = animalID

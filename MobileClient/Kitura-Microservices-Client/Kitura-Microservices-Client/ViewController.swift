@@ -15,7 +15,7 @@ final class ViewController: UICollectionViewController {
     
     @IBAction private func makeRequest() {
         // this is where we will start working with our params
-        let defaults = UserDefaults.standard
+        _ = UserDefaults.standard
         print("defaults loaded")
     }
     
