@@ -8,12 +8,11 @@
 
 import UIKit
 
-enum AnimalType {
-    case Bear
-    case Cat
-}
-
 class Animal: Equatable {
+    enum AnimalType {
+        case Cat
+        case Bear
+    }
     var loadedImage: UIImage?
     let animalID: Int
     let photoURL: String

@@ -456,6 +456,7 @@
 				53BC5B0A1E3840BC0074B064 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		53BC5B0B1E3840BC0074B064 /* Build configuration list for PBXNativeTarget "Kitura-Microservices-ClientTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +465,7 @@
 				53BC5B0D1E3840BC0074B064 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,13 +7,13 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Animals!-->
         <scene sceneID="M0f-oB-J0s">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kUa-gd-TdJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <collectionViewController id="pIM-4U-bnd" customClass="ViewController" customModule="Kitura_Microservices_Client" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="cFw-nC-mWt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -33,7 +33,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="333" height="271"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="25a-Ka-0rI">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="25a-Ka-0rI">
                                             <rect key="frame" x="0.0" y="0.0" width="333" height="236"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Looks Friendly: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GBf-Bm-eg2">
@@ -80,13 +80,26 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="Animals!" id="nna-U2-HfT">
-                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="z59-P1-65N"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="Ojz-LF-NoQ"/>
+                        <leftBarButtonItems>
+                            <barButtonItem systemItem="refresh" id="z59-P1-65N">
+                                <connections>
+                                    <action selector="makeRequest" destination="pIM-4U-bnd" id="t74-Co-oyw"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="play" id="yx2-CU-4qj">
+                                <connections>
+                                    <action selector="makeSampleRequest" destination="pIM-4U-bnd" id="y51-XU-VYd"/>
+                                </connections>
+                            </barButtonItem>
+                        </leftBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="Ojz-LF-NoQ">
+                            <connections>
+                                <segue destination="wkU-ez-46U" kind="show" id="rym-Lj-eJP"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <segue destination="wkU-ez-46U" kind="show" identifier="SettingsSegue" id="EPd-OT-Wfb"/>
-                    </connections>
                 </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kUa-gd-TdJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1868" y="36.431784107946029"/>
         </scene>
@@ -118,7 +131,10 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="URL"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="URL" keyboardAppearance="alert" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="wkU-ez-46U" id="UaX-Cb-AiB"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animal Choice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i3O-nw-4kJ">
                                 <rect key="frame" x="16" y="146" width="343" height="28"/>
@@ -139,6 +155,9 @@
                                     <segment title="Bears"/>
                                     <segment title="Both"/>
                                 </segments>
+                                <connections>
+                                    <action selector="segmentedControlValueChanged" destination="wkU-ez-46U" eventType="valueChanged" id="kMH-Ex-LZ0"/>
+                                </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Looking Friendly?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yU2-nG-tUG">
                                 <rect key="frame" x="16" y="218" width="343" height="28"/>
@@ -159,6 +178,9 @@
                                     <segment title="Unfriendly Only"/>
                                     <segment title="Both"/>
                                 </segments>
+                                <connections>
+                                    <action selector="segmentedControlValueChanged" destination="wkU-ez-46U" eventType="valueChanged" id="lGX-6e-EOI"/>
+                                </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Need more than one Animal?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9DM-Gr-ncg">
                                 <rect key="frame" x="16" y="290" width="343" height="28"/>
@@ -179,6 +201,9 @@
                                     <segment title="Many Animals"/>
                                     <segment title="Both"/>
                                 </segments>
+                                <connections>
+                                    <action selector="segmentedControlValueChanged" destination="wkU-ez-46U" eventType="valueChanged" id="aKI-Gv-cZi"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -210,6 +235,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="AAj-qu-YPY"/>
+                    <connections>
+                        <outlet property="animalChoiceControl" destination="gsD-Jl-D0f" id="zmO-XV-i6R"/>
+                        <outlet property="friendlyChoiceControl" destination="7Fq-vU-hf5" id="FkJ-4j-zJn"/>
+                        <outlet property="hostTextField" destination="wBS-fr-5ZU" id="cap-6W-fgR"/>
+                        <outlet property="pluralChoiceControl" destination="UQX-ut-CIC" id="48h-pX-H6v"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SKB-F8-b8X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

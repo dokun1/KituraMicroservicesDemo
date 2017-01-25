@@ -13,9 +13,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let defaults = UserDefaults.standard
+        if defaults.bool(forKey: "hasLoadedForFirstTime") == false {
+            defaults.set(true, forKey: "hasLoadedForFirstTime")
+            defaults.set("http://localhost:8090", forKey: DefaultQueryOptions.hostURLDefaultKey)
+            defaults.set(DefaultQueryOptions.animalsAll, forKey: DefaultQueryOptions.animalChoiceDefaultKey)
+            defaults.set(DefaultQueryOptions.allFriendlyAnimals, forKey: DefaultQueryOptions.friendlyChoiceDefaultKey)
+            defaults.set(DefaultQueryOptions.allNumberedAnimals, forKey: DefaultQueryOptions.pluralChoiceDefaultKey)
+        }
+        defaults.synchronize()
         return true
     }
 
