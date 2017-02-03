@@ -1,19 +1,44 @@
-## Kitura Microservices Demo
+# Kitura Microservices Demo
 
-[![Twitter](https://img.shields.io/badge/contact-@dokun24-blue.svg?style=flat)](https://twitter.com/dokun24)
-[![License](http://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://github.com/dokun1/firstRuleFireplace/blob/master/LICENSE)
+## About 
 
-### About
+This is a demo that shows RESTful interaction amongst the following:
 
-This is a demonstration of how to use Kitura to make a request to the web, parse information from that request, and redistribute it to an iOS client. In this case, we are analyzing historical NFL game scores.
+* an iOS Mobile Application
+* a [Kitura](http://kitura.io) server 
+* two [Loopback](http://loopback.io) servers posing as microservices
 
-This particular use case allows you to specify a request to Kitura from any client (in this case, an iOS app), with the week you want to view, and that request will be passed to a Node.js microservice that scrapes NFL.com. Kitura will parse the output, and send it back in a response to the client.
+In order to run the entire application, you will need to have the following installed on your local machine:
 
-The purpose of this set up is to demonstrate how simple it is to work with object models in a context iOS developers are familiar with. This could be expanded upon by persisting data to a database using a Kitura connector, or anything else.
+* Node.js
+* npm
+* Xcode
+* Swift Package Manager
 
-For more information, visit http://www.kitura.io.
+First, navigate to `BearsAPI/` and `CatsAPI/` in separate instances of your command line. At the root of each of those directories, type `node .` to run each api. You should see the following messages:
 
-### Setup
-You will need to visit here: https://github.com/dokun1/nfl-score-scraper and run this on your machine in order to get this to work.
+```
+Sample Cats added
+Web server listening at: http://0.0.0.0:3030
+Browse your REST API at http://0.0.0.0:3030/explorer
+```
 
-Packages pulled from Swift Package Manager are not included in this repository - once you pull this repository, run `swift build` in the root directory on the command line, and Swift Package Manager will pull down the necessary dependencies.
+AND
+
+```
+Sample bears added
+Web server listening at: http://0.0.0.0:3001
+Browse your REST API at http://0.0.0.0:3001/explorer
+```
+
+Once these are both running, you can go back up to the main root directory. After that, navigate to `Server/` and type the following command in a separate terminal window:
+
+```
+swift package init --type executable
+```
+
+Swift Package Manager will install all the necessary dependencies you need to run Kitura. After this is complete, go back to the root directory and open `Workspace.xcworkspace`. You should be able to run both the client (simulator) and the server simultaneously in the workspace. Try the app, try debugging on both client and server, and observe it's behavior.
+
+Also, notice that both the Kitura server 
+
+A tutorial will soon be made of this, but enjoy the completed product for now :-)
