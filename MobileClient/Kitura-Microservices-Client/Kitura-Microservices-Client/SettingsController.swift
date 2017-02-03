@@ -9,22 +9,22 @@
 import UIKit
 
 public struct DefaultQueryOptions {
-    static let hostURLDefaultKey = "com.ibm.cloud.kituraDemo.hostURLKey"
-    static let animalChoiceDefaultKey = "com.ibm.cloud.kituraDemo.animalChoiceKey"
-    static let friendlyChoiceDefaultKey = "com.ibm.cloud.kituraDemo.friendlyChoiceKey"
-    static let pluralChoiceDefaultKey = "com.ibm.cloud.kituraDemo.pluralChoiceKey"
+    static let hostURLDefaultKey = "com.ibm.cloud.kituraAnimalsDemo.hostURLKey"
+    static let animalChoiceDefaultKey = "com.ibm.cloud.kituraAnimalsDemo.animalChoiceKey"
+    static let friendlyChoiceDefaultKey = "com.ibm.cloud.kituraAnimalsDemo.friendlyChoiceKey"
+    static let pluralChoiceDefaultKey = "com.ibm.cloud.kituraAnimalsDemo.pluralChoiceKey"
     
-    static let animalsBearsOnly = "animals=bears"
-    static let animalsCatsOnly = "animals=cats"
-    static let animalsAll = "animals=all"
+    static let animalsBearsOnly = AnimalConstants.bear
+    static let animalsCatsOnly = AnimalConstants.cat
+    static let animalsAll = "all"
     
-    static let friendlyAnimalsOnly = "friendly=true"
-    static let unfriendlyAnimalsOnly = "friendly=false"
-    static let allFriendlyAnimals = "friendly=all"
+    static let friendlyAnimalsOnly = "true"
+    static let unfriendlyAnimalsOnly = "false"
+    static let allFriendlyAnimals = "all"
 
-    static let pluralAnimalsOnly = "plural=true"
-    static let singleAnimalsOnly = "plural=false"
-    static let allNumberedAnimals = "plural=all"
+    static let pluralAnimalsOnly = "true"
+    static let singleAnimalsOnly = "false"
+    static let allNumberedAnimals = "all"
 }
 
 final class SettingsController: UIViewController {
@@ -71,9 +71,9 @@ final class SettingsController: UIViewController {
         }
         
         if let pluralChoiceString = defaults.string(forKey: DefaultQueryOptions.pluralChoiceDefaultKey) {
-            if pluralChoiceString == DefaultQueryOptions.pluralAnimalsOnly {
+            if pluralChoiceString == DefaultQueryOptions.singleAnimalsOnly {
                 pluralChoiceControl.selectedSegmentIndex = 0
-            } else if pluralChoiceString == DefaultQueryOptions.singleAnimalsOnly {
+            } else if pluralChoiceString == DefaultQueryOptions.pluralAnimalsOnly {
                 pluralChoiceControl.selectedSegmentIndex = 1
             } else {
                 pluralChoiceControl.selectedSegmentIndex = 2
@@ -117,10 +117,10 @@ final class SettingsController: UIViewController {
         
         switch pluralChoiceControl.selectedSegmentIndex {
         case 0:
-            defaults.set(DefaultQueryOptions.pluralAnimalsOnly, forKey: DefaultQueryOptions.pluralChoiceDefaultKey)
+            defaults.set(DefaultQueryOptions.singleAnimalsOnly, forKey: DefaultQueryOptions.pluralChoiceDefaultKey)
             break
         case 1:
-            defaults.set(DefaultQueryOptions.singleAnimalsOnly, forKey: DefaultQueryOptions.pluralChoiceDefaultKey)
+            defaults.set(DefaultQueryOptions.pluralAnimalsOnly, forKey: DefaultQueryOptions.pluralChoiceDefaultKey)
             break
         default:
             defaults.set(DefaultQueryOptions.allNumberedAnimals, forKey: DefaultQueryOptions.pluralChoiceDefaultKey)

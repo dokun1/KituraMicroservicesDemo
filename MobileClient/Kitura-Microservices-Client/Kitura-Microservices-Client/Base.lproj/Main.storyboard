@@ -133,7 +133,7 @@
                         <leftBarButtonItems>
                             <barButtonItem systemItem="refresh" id="z59-P1-65N">
                                 <connections>
-                                    <action selector="makeRequest" destination="pIM-4U-bnd" id="t74-Co-oyw"/>
+                                    <action selector="getAnimalsButtonTapped" destination="pIM-4U-bnd" id="Y4k-ih-gG3"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem systemItem="play" id="yx2-CU-4qj">
