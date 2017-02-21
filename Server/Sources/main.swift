@@ -49,7 +49,7 @@ func fetch(_ url: URL, completion: @escaping RequestFetchClosure) {
     task.resume()
 }
 
-func filterAnimals(animals: [Animal], _ request: RouterRequest) -> [Animal] {
+func filter(_ animals: [Animal], _ request: RouterRequest) -> [Animal] {
     var filteredAnimals = animals
     let animalChoice = request.parameters["animals"]
     let friendlyChoice = request.parameters["friendly"]
@@ -90,7 +90,7 @@ router.get("/animals/:animals/friendly/:friendly/plural/:plural") { request, res
     }
 
     animalGroup.notify(queue: DispatchQueue.global(qos: .default)) {
-        animals = filterAnimals(animals: animals, request)
+        animals = filter(animals, request)
         var results = [[String: AnyObject]]()
         for animal in animals {
             results.append(animal.json)
