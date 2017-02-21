@@ -12,87 +12,92 @@ router.get("/") { request, response, next in
     next()
 }
 
-router.get("/animals/:animals/friendly/:friendly/plural/:plural") { request, response, next in
+enum AnimalAPIError: Error {
+    case NoData
+    case CouldNotParse
+    case NoResponse
+    case OtherError(String)
+}
+
+typealias RequestFetchClosure = (_ animals: [Animal]?, _ error: Error?) -> Void
+
+func fetch(_ url: URL, completion: @escaping RequestFetchClosure) {
+    let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+        if let error = error {
+            completion(nil, AnimalAPIError.OtherError(error.localizedDescription))
+        }
+        do {
+            guard let data = data else {
+                completion(nil, AnimalAPIError.NoData)
+                return
+            }
+            guard let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [[String: AnyObject]] else {
+                completion(nil, AnimalAPIError.CouldNotParse)
+                return
+            }
+            var animals = [Animal]()
+            for animalJson in json {
+                if let animal = Animal.init(json: animalJson) {
+                    animals.append(animal)
+                }
+            }
+            completion(animals, nil)
+        } catch {
+            completion(nil, AnimalAPIError.OtherError("Unhandled Error"))
+        }
+    }
+    task.resume()
+}
+
+func filterAnimals(animals: [Animal], _ request: RouterRequest) -> [Animal] {
+    var filteredAnimals = animals
     let animalChoice = request.parameters["animals"]
     let friendlyChoice = request.parameters["friendly"]
     let pluralChoice = request.parameters["plural"]
     
-    let catSemaphore = DispatchSemaphore(value: 0)
-    let bearSemaphore = DispatchSemaphore(value: 0)
-    var animals = [Animal]()
-    guard let catsURL = URL(string: "http://0.0.0.0:3030/api/Cats") else {
-        next()
-        return
-    }
-    guard let bearsURL = URL(string: "http://0.0.0.0:3001/api/Bears") else {
-        next()
-        return
-    }
-    URLSession.shared.dataTask(with: catsURL, completionHandler: { catsData, catsResponse, catsError in
-        do {
-            guard let data = catsData else {
-                next()
-                return
-            }
-            guard let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [[String: AnyObject]] else {
-                next()
-                return
-            }
-            for catJson in json {
-                if let cat = Animal.init(json: catJson) {
-                    animals.append(cat)
-                }
-            }
-        } catch {
-            next()
-            return
-        }
-        catSemaphore.signal()
-    }).resume()
-    URLSession.shared.dataTask(with: bearsURL, completionHandler: { bearsData, bearsResponse, bearsError in
-        do {
-            guard let data = bearsData else {
-                next()
-                return
-            }
-            guard let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [[String: AnyObject]] else {
-                next()
-                return
-            }
-            for bearJson in json {
-                if let bear = Animal.init(json: bearJson) {
-                    animals.append(bear)
-                }
-            }
-        } catch {
-            next()
-            return
-        }
-        bearSemaphore.signal()
-    }).resume()
-    catSemaphore.wait()
-    bearSemaphore.wait()
     if animalChoice != "all" {
-        animals = animals.filter {
+        filteredAnimals = filteredAnimals.filter {
             $0.type.rawValue == animalChoice
         }
     }
     if friendlyChoice != "all" {
-        animals = animals.filter {
+        filteredAnimals = filteredAnimals.filter {
             $0.looksFriendly == friendlyChoice?.toBool()
         }
     }
     if pluralChoice != "all" {
-        animals = animals.filter {
+        filteredAnimals = filteredAnimals.filter {
             $0.plural == pluralChoice?.toBool()
         }
     }
-    var results = [[String: AnyObject]]()
-    for animal in animals {
-        results.append(animal.json)
+    return filteredAnimals
+}
+
+router.get("/animals/:animals/friendly/:friendly/plural/:plural") { request, response, next in
+    let animalGroup = DispatchGroup()
+    var animals = [Animal]()
+    for address in ["http://0.0.0.0:3030/api/Cats", "http://0.0.0.0:3001/api/Bears"] {
+        guard let url = URL(string: address) else {
+            return
+        }
+        animalGroup.enter()
+        fetch(url, completion: { fetchedAnimals, error in
+            if let fetchedAnimals = fetchedAnimals {
+                animals.append(contentsOf: fetchedAnimals)
+            }
+            animalGroup.leave()
+        })
     }
-    response.send(json: JSON(results))
-    next()
+
+    animalGroup.notify(queue: DispatchQueue.global(qos: .default)) {
+        animals = filterAnimals(animals: animals, request)
+        var results = [[String: AnyObject]]()
+        for animal in animals {
+            results.append(animal.json)
+        }
+        response.send(json: JSON(results))
+        next()
+    }
 }
 
 // Add an HTTP server and connect it to the router
