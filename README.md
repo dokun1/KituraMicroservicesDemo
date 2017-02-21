@@ -39,6 +39,6 @@ swift package init --type executable
 
 Swift Package Manager will install all the necessary dependencies you need to run Kitura. After this is complete, go back to the root directory and open `Workspace.xcworkspace`. You should be able to run both the client (simulator) and the server simultaneously in the workspace. Try the app, try debugging on both client and server, and observe it's behavior.
 
-Also, notice that both the Kitura server 
+Also, notice that both the Kitura server and the mobile client share the model class `Animal.swift`.
 
 A tutorial will soon be made of this, but enjoy the completed product for now :-)
